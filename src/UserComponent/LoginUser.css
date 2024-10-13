@@ -1,0 +1,91 @@
+/* Main background radial gradient */
+.background-radial-gradient {
+    height: 100vh; /* Ensures full screen height */
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+        hsl(218, 41%, 35%) 15%,
+        hsl(218, 41%, 30%) 35%,
+        hsl(218, 41%, 20%) 75%,
+        hsl(218, 41%, 19%) 80%,
+        transparent 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Shape effects for circles */
+  #radius-shape-1,
+  #radius-shape-2 {
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    z-index: 1;
+  }
+  
+  #radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+  }
+  
+  #radius-shape-2 {
+    height: 300px;
+    width: 300px;
+    bottom: -60px;
+    right: -110px;
+  }
+  
+  .bg-glass {
+    background-color: hsla(0, 0%, 100%, 0.8) !important;
+    backdrop-filter: saturate(200%) blur(25px);
+    z-index: 2; /* Ensure it's above the shapes */
+  }
+  
+  /* Text alignment and font settings for the headings */
+  .display-3 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-md-start {
+    text-align: left !important;
+  }
+  
+  @media (max-width: 768px) {
+    .text-md-start {
+      text-align: center !important;
+    }
+  }
+  
+  /* Sign-up button styling */
+  .MDBBtn {
+    background-color: hsl(218, 81%, 45%);
+    border-radius: 0.25rem;
+  }
+  
+  .MDBBtn:hover {
+    background-color: hsl(218, 81%, 40%);
+  }
+  
+  /* Adjust the card body to add more padding for a cleaner design */
+  .MDBCardBody {
+    padding: 2.5rem;
+  }
+  
+  /* Ensure the form container is centered and clean */
+  .MDBCard {
+    z-index: 2; /* Ensure the form is above the background circles */
+  }
+  
+  /* Optional additional spacing for form inputs */
+  .MDBInput input {
+    padding: 0.75rem 1rem;
+    margin: 20px;
+  }
+  
