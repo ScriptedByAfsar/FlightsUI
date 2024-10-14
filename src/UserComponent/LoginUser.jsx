@@ -1,67 +1,48 @@
-import React from "react";
+import React from 'react';
+import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
 import "../UserComponent/LoginUser.css"
-import {
-    MDBBtn,
-    MDBContainer,
-    MDBRow,
-    MDBCol,
-    MDBCard,
-    MDBCardBody,
-    MDBInput,
-    MDBCheckbox,
-    MDBIcon
-  }
-  from 'mdb-react-ui-kit';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import { useNavigate } from 'react-router-dom';
 
-function LoginUser(){
-    return (
-        <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden'>
+function Login() {
+  const Navigate = useNavigate();
+  return (
+    <MDBContainer fluid className="p-3 my-5 h-custom">
 
       <MDBRow>
 
-        <MDBCol md='6' className='position-relative'>
+        <MDBCol col='10' md='6'>
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" />
+        </MDBCol>
 
-          <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
+        <MDBCol col='4' md='6'>
 
-          <MDBCard className='my-5 bg-glass'>
-            <MDBCardBody className='p-5'>
+          <div className="d-flex flex-row align-items-center justify-content-center">
 
-              <MDBRow>
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
-                </MDBCol>
+            <p className="lead fw-normal mb-0 me-3">LOGIN</p>
+            <br /><br /><br /><br />
 
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='Last name' id='form2' type='text'/>
-                </MDBCol>
-              </MDBRow>
+          </div>
 
-              <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
-              <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
+          <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>
+          <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
 
-              <div className='d-flex justify-content-center mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
-              </div>
+          <div className="d-flex justify-content-between mb-4">
+            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+            <a href="!#">Forgot password?</a>
+          </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
-
-              <div className="text-center">
-
-                <p>or sign up with:</p>
-
-              </div>
-
-            </MDBCardBody>
-          </MDBCard>
+          <div className='text-center text-md-start mt-4 pt-2'>
+            <MDBBtn className="mb-0 px-5" size='lg'>Login</MDBBtn>
+            <p className="small fw-bold mt-2 pt-1 mb-2">Don't have an account? <a href="#!" onClick={()=>Navigate('/Signup')} className="link-danger">Register</a></p>
+          </div>
 
         </MDBCol>
 
       </MDBRow>
 
     </MDBContainer>
-    );
-
+  );
 }
 
-export default LoginUser;
+export default Login;
