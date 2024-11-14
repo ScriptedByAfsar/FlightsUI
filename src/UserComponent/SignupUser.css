@@ -43,3 +43,10 @@
   backdrop-filter: saturate(200%) blur(25px);
   padding: 5px;
 }
+
+.passwordPara{
+  color: #d65a5a; /* Matches the red color in the screenshot */
+  font-family: Arial, sans-serif; /* Use the same font family as the rest of your form */
+  font-size: 0.875rem; /* Approximately 14px for small error text */
+  margin-top: 0.25rem;
+}

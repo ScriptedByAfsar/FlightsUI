@@ -1,4 +1,4 @@
-import { MDBBtn, MDBContainer } from "mdb-react-ui-kit";
+import { MDBBtn, MDBContainer, MDBInput } from "mdb-react-ui-kit";
 import React from "react";
 
 function ResetPassword() {

@@ -3,6 +3,7 @@ import LoginUser from './UserComponent/LoginUser';
 import Signup from './UserComponent/SignupUser';
 import ForgotPassword from './UserComponent/ForgotPassword';
 import ResetPassword from './UserComponent/ResetPassword';
+import Val from './UserComponent/validationBoxTest';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path='/Signup' element={<Signup />}/>
           <Route path='/ForgotPassword' element={<ForgotPassword />}/>
           <Route path='/ResetPassword' element={<ResetPassword />}/>
+          <Route path='/Val' element={<Val />}/>
         </Routes>
       </Router>
   );

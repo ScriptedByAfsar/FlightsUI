@@ -17,3 +17,53 @@
 .ResetPassword{
   margin-left: 250px;
 }
+#errorsPara {
+  color: rgb(255, 0, 0);
+}
+
+/* Hide default checkbox */
+.custom-checkbox-input {
+  display: none;
+}
+
+/* Custom checkbox appearance */
+.custom-checkbox-label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333; /* Adjust text color as desired */
+}
+
+/* Create custom checkbox appearance */
+.custom-checkbox-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd; /* Checkbox border color */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f8f9fa; /* Background color of unchecked checkbox */
+  transition: background-color 0.3s ease;
+}
+
+/* Checkbox checked appearance */
+.custom-checkbox-input:checked + .custom-checkbox-label::before {
+  background-color: #007bff; /* Custom color for checked state */
+  border-color: #007bff; /* Change border color when checked */
+}
+
+/* Optional: Add a checkmark for checked state */
+.custom-checkbox-input:checked + .custom-checkbox-label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 8px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
